@@ -1,29 +1,29 @@
 #Declaramos nuestra lista 3D
 
 
-tem_ciudad = [
+tem_ciudades = [
     [  #Ciudad 1
-    [21,12,13,14,17,25,22],
-    [18,17,15,27,21,24,25],
-    [15,19,18,21,22,26,27],
-    [17,17,29,29,27,29,18]
+    [25,26,13,24,11,12,12],
+    [20,15,10,17,11,14,15],
+    [25,29,28,11,12,26,17],
+    [19,16,19,9,27,29,18]
 ],
     [ #Ciudad 2
-    [22,21,17,18,19,23,22],
-    [27,23,21,15,19,17,14 ],
-    [22,23,22,27,30,22,25],
-    [24,25,32,15,25,24,17]
+    [22,21,17,8,19,23,22],
+    [27,23,23,25,29,27,17 ],
+    [24,26,12,27,10,12,15],
+    [21,15,12,25,25,24,17]
     ],
 [ #Ciudad 3
-    [27,25,24,22,27,31,26],
-    [21,27,23,22,17,19,17],
-    [34,22,31,24,21,28,25],
-    [21,24,25,36,24,25,29]
+    [17,15,14,27,17,11,29],
+    [26,17,13,28,27,29,27],
+    [30,11,12,14,26,27,25],
+    [18,23,31,26,26,15,19]
     ]
 ]
 
-#Declaramos las variables
-semana = 0
+#Declaramos las variables semana,día
+semana = 1
 dia = 0
 
 suma = 0
@@ -31,13 +31,13 @@ suma = 0
 
 
 #Creamos los bucle for para recorrer nuestra lista de temepraturas
-for ciudades in range(len(tem_ciudad)): #Recorremos toda la lista
-    if ciudades == semana: #Creamos una condición para comparar si la variable semana es igual al recorrido de ciudades
-        for semanas in range(len(tem_ciudad[ciudades])): # Recorremos las semanas dentro de ciudades
-            if semanas == dia :#Creamos una condición para comparar si la variable dias es igual al recorrido de semanas
+for i in range(len(tem_ciudades)): #Recorremos toda la lista
+    if i == semana: #Creamos una condición para comparar si la variable semana es igual al recorrido de nuestra iteración i
+        for j in range(len(tem_ciudades[i])): # Recorremos las semanas dentro de ciudades
+            if j == dia :#Creamos una condición para comparar si la variable dias es igual al recorrido de nuestra iteración j
                  promedio = 0 #Iniciamos el promedio en 0
-                 for dias in range(len(tem_ciudad[ciudades][semanas])):  #Recorremos los numeros dentro de ciudades y semanas.
-                    suma+= tem_ciudad[ciudades][semanas][dias]  #Sumamos las temperaturas
-                    promedio = suma / len(tem_ciudad[ciudades][semanas]) #Calculamos el promedio y dividimos para
+                 for k in range(len(tem_ciudades[i][j])):  #Recorremos los numeros dentro de ciudades y semanas.
+                    suma+= tem_ciudades[i][j][k]  #Sumamos las temperaturas
+                    promedio = suma / len(tem_ciudades[i][j]) #Calculamos el promedio y dividimos para el conteo de nuestras lista en i y j
 
-                 print(f"El promedio de la temperatura de la ciudad {semana} de la semana {dia} es {promedio}")  #Imprimimos
+                 print(f"El promedio de la temperatura de la ciudad {semana} de la semana {dia} es {promedio}")  #Imprimimos el promedio
