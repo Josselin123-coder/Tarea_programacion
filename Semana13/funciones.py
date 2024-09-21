@@ -29,7 +29,7 @@ def calcular_prom (temperatura,ciudad,semana):
     for temp in range (len(temperatura[ciudad][semana])):
         suma+= temperatura[ciudad][semana][temp]   #Sumamos nuestra lista con la ciudad y semana que se vaya escojer
 
-    promedio = suma / len(tem_ciudades[ciudad][semana]) # Dividimos  nuestra suma para la longitud de la semana que escojimos en este caso para 7
+    promedio = suma / len(temperatura[ciudad][semana]) # Dividimos  nuestra suma para la longitud de la semana que escojimos en este caso para 7
 
     return f"La ciudad {ciudad} en su semana {semana} tiene un promedio de {promedio: .2f} °C" # Retornamos el promedio
 
@@ -40,7 +40,7 @@ for i in tem_ciudades :  #Mostramos nuestra lista de temperaturas
 
 print("")
 #Llamamos a nuestra funcion
-mostrar = (calcular_prom(tem_ciudades,0,0))
+mostrar = (calcular_prom(tem_ciudades,1,1))
 print(mostrar)  #Mostramos en pantalla
 
 
