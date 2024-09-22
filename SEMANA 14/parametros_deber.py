@@ -40,5 +40,5 @@ while True :  #Creamos un bucle while para ingresar los datos
 for i in matriz_total :  #Imprimimos nuestra tabla
     print(i)
 precio_F = suma(matriz_total)  #Llamamos a la función y su parametro
-print(f"El precio final de los productos con el descuento del {des}% es {precio_F}")  #Imprimimos el precio final con el descuento
+print(f"El precio final de los productos con el descuento del {desc}% es {precio_F}")  #Imprimimos el precio final con el descuento
 
